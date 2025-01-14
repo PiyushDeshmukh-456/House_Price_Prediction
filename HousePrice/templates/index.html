@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction (Pune)</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2>House Price Prediction (Pune)</h2>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="size">Number of Bedrooms:</label>
+                <input type="number" name="size" id="size" required>
+            </div>
+            <div class="form-group">
+                <label for="total_sqft">Total Square Feet:</label>
+                <input type="number" name="total_sqft" id="total_sqft" required>
+            </div>
+            <div class="form-group">
+                <label for="bath">Number of Bathrooms:</label>
+                <input type="number" name="bath" id="bath" required>
+            </div>
+            <div class="form-group">
+                <label for="balcony">Number of Balconies:</label>
+                <input type="number" name="balcony" id="balcony" required>
+            </div>
+            <div class="form-group">
+                <label for="site_location">Location:</label>
+                <select name="site_location" id="site_location" required>
+                    <option value="" disabled selected>Select a location</option>
+                    {% for location in locations %}
+                        <option value="{{ location }}">{{ location }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="button-container">
+                <button type="submit">Predict</button>
+            </div>
+            {% if prediction_text %}
+            <div class="form-group">
+             <h3>Estimated House Price:{{ prediction_text }}</h3>
+            </dic>
+           {% endif %}
+        </form>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#site_location').select2({
+                placeholder: 'Select a location',
+                allowClear: true
+            });
+        });
+    </script>
+</body>
+</html>
