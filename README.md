@@ -1,5 +1,6 @@
 🏡 Pune House Price Prediction
-Welcome to the Pune House Price Prediction Tool! This web application uses machine learning to help users estimate house prices in Pune based on various features, such as location, size, and amenities. Whether you're buying or selling property, this tool provides accurate price predictions to guide your decisions.
+
+Welcome to the Pune House Price Prediction Tool! This web application uses machine learning to help users estimate house prices in Pune based on various features, such as location, size, and amenities. Whether you are buying or selling property, this tool provides accurate price predictions to guide your decisions.
 
 🚀 Features
 1. User-Friendly Interface
@@ -20,7 +21,8 @@ The model is trained on an open-source dataset of Pune housing prices. It was in
 ✨ Key Preprocessing Steps:
 Converting mixed formats of square footage into a unified numeric value.
 Handling missing values to ensure reliable predictions.
-Encoding categorical data, such as location, for use in the model.
+Encoding categorical data, such as location, for use in the model
+
 🧠 How It Works
 1. Input Features
 Users provide details such as:
@@ -37,21 +39,25 @@ Upon submission, the app processes the input through the trained model to calcul
 Effortlessly find your desired location with a dynamic search field.
 
 📷 Screenshots
+Here’s a sneak peek at the application:
+
 Home Page:
+![Screenshot (870)](https://github.com/user-attachments/assets/465ceff1-429a-4534-a63c-9b44bb6cb179)
 
 
 Prediction Result:
+![Screenshot (871)](https://github.com/user-attachments/assets/994fc522-c6af-4bdf-b96c-719e8c937eaf)**
 
-
-📝 Documentation
+**##📝 Documentation
 Code Structure:
-app.py: The primary Flask application file managing user interactions and routes.
-train_model.py: Contains the script for training the machine learning model and saving it as model.pkl.
-run.py: A lightweight script for launching the Flask application.
-templates/: Folder containing HTML files for rendering web pages.
-static/: Directory for CSS and JavaScript files to enhance the UI.
-requirements.txt: Lists all dependencies required to run the project seamlessly.
-🛠️ Installation and Usage
+1. app.py: The primary Flask application file managing user interactions and routes.
+2. train_model.py: Contains the script for training the machine learning model and saving it as model.pkl.
+3. run.py: A lightweight script for launching the Flask application.
+4. templates/: Folder containing HTML files for rendering web pages.
+5. static/: Directory for CSS and JavaScript files to enhance the UI.
+6. requirements.txt: Lists all dependencies required to run the project seamlessly
+
+##🛠️ Installation and Usage
 Prerequisites:
 Python 3.8+
 Flask
@@ -79,7 +85,8 @@ bash
 Copy code
 python run.py
 Access the app at: http://127.0.0.1:5000
+
 🔗 Future Enhancements
-Upgrade the model to Random Forest or Gradient Boosting for better accuracy.
-Add data visualization to display market trends.
-Introduce authentication for user-specific data analysis.
+1. Upgrade the model to Random Forest or Gradient Boosting for better accuracy.
+2. Add data visualization to display market trends.
+3. Introduce authentication for user-specific data analysis.
